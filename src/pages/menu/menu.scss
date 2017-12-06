@@ -1,0 +1,26 @@
+page-home {
+    .body {
+        background-color: #72b7e5;
+    }
+    .container {
+        margin-top: 140px;
+        background-color: #72b7e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .header {
+        text-align: center;
+        align-items: center
+    }
+    .button {
+        margin-top: 50px;
+    }
+    .footer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}

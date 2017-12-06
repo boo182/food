@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="body">
+<ion-list>
+  <ion-list-header *ngFor="let categories of menu; let catId = index" no-lines>
+    <button ion-item (click)="_toggleCategory(catId)">
+    <ion-img width="80" height="80" src="#"></ion-img>
+    {{categories.name}}
+    </button>
+    <ion-list *ngIf="categories.products && categories.open">
+      <li *ngFor="let product of categories.products; let productId = index">
+          <ion-img width="80" height="80" src="product.img"></ion-img>
+          <p>{{product.name}}{{product.price}}$</p>
+          <button (click)="_addToCart(catId, productId)">+</button>
+            <span>{{product.quantity || 0}}</span>
+          <button (click)="deleteFromCart(catId, productId)">-</button>
+        </li>
+      </ion-list>
+    </ion-list-header>
+</ion-list>
+</ion-content>
