@@ -5,6 +5,11 @@
 </ion-header>
 
 <ion-content class="body">
+  <ion-list>
+    <li *ngFor="let item of cart">
+      {{item.name}}
+    </li>
+  </ion-list>
 <ion-list>
   <ion-list-header *ngFor="let categories of menu; let catId = index" no-lines>
     <button ion-item (click)="_toggleCategory(catId)">
@@ -17,7 +22,7 @@
           <p>{{product.name}}{{product.price}}$</p>
           <button (click)="_addToCart(catId, productId)">+</button>
             <span>{{product.quantity || 0}}</span>
-          <button (click)="deleteFromCart(catId, productId)">-</button>
+          <button (click)="_deleteFromCart(catId, productId)">-</button>
         </li>
       </ion-list>
     </ion-list-header>

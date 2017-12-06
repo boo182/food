@@ -16,17 +16,28 @@ export class MenuPage {
     json.subscribe(data => {
       this.menu = data
     });
-  this.cart = []; 
-  }
-  _toggleCategory = (i) => {
-    this.menu[i].open = !this.menu[i].open;
-  } 
+  this.cart = [];
+}
+_toggleCategory = (i) => {
+  this.menu[i].open = !this.menu[i].open;
+} 
 
-  _addToCart = (catId, productId) => {
-    let quantity = this.menu[catId].products[productId].quantity;
-    this.cart.push(this.menu[catId].products[productId]);
-    quantity = quantity + 1;
-    console.log(this.cart);
-    console.log(quantity);
+_addToCart = (catId, productId) => {
+  this.menu[catId].products[productId].quantity = 
+  this.menu[catId].products[productId].quantity
+  ? this.menu[catId].products[productId].quantity + 1
+  : 1;
+
+  this.cart.push(this.menu[catId].products[productId]);
+}
+
+_deleteFromCart = (catId, productId) => {
+  this.menu[catId].products[productId].quantity = 
+  this.menu[catId].products[productId].quantity === 0 
+  ? 0 
+  :this.menu[catId].products[productId].quantity - 1;
+
+  const itemToRemove = this.cart.findIndex(item => item.name === this.menu[catId].products[productId].name);
+  this.cart.splice(itemToRemove, 1);
   }
 }
