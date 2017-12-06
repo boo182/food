@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+//
+import { MenuPage } from '../menu/menu';
 
 @Component({
   selector: 'page-home',
@@ -9,6 +11,10 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  private onPress = () => {
+    this.navCtrl.push(MenuPage);
   }
 
 }
