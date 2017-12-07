@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { MenuPage } from '../pages/menu/menu';
 import { PaymentPage } from '../pages/payment/payment';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ConfirmationPage } from '../pages/confirmation/confirmation';
+
 
 //Services
 import { MenuService } from '../services/menu.service';
@@ -19,6 +21,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+    ConfirmationPage,
     HomePage,
     MenuPage,
     PaymentPage,
@@ -32,6 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    ConfirmationPage,
     HomePage,
     TabsPage,
     MenuPage,

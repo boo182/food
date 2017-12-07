@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ConfirmationPage } from '../confirmation/confirmation';
 //
 
 
@@ -28,5 +29,12 @@ export class PaymentPage {
 
   _goBack = () => {
     this.navCtrl.pop();
+  }
+  _onPay = () => {
+    this.navCtrl.push(ConfirmationPage, {
+      finalOrder: this.cart,
+      total: this.total,
+    });
+
   }
 }

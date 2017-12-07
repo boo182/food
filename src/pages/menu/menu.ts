@@ -49,7 +49,7 @@ _addToCart = (catId, productId) => {
 
 /**
   * Méthode qui prend les indexs des catégories et des produits 
-  * qui supprime l'objet désiré du panier. Elle décrément le compteur de l'objet
+  * qui supprime l'objet désiré du panier. Elle décrémente le compteur de l'objet
   * et lance la fonction de calcul du prix final. Elle modifie la propriété quantity
   * en conséquence
   * @param {number} catId
