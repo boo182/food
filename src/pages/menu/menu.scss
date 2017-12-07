@@ -18,6 +18,12 @@ page-menu {
 }
 .counterButton {
     font-size: 18px;
+    border: 1px solid #F6F6F6;
+    border-radius: 50%;
+    background-color: #F6F6F6;
+    text-align: center;
+    width: 25px;
+    
 }
 ion-list ion-list-header {
     border: none;
@@ -58,5 +64,8 @@ item-md ion-thumbnail img {
 }
 .prodlabel {
     color: black;
+}
+h1{
+    padding-left: 20px;
 }
 }

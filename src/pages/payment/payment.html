@@ -5,7 +5,12 @@
 </ion-header>
 
 <ion-content class="body">
-  <h1 padding>Mon Panier</h1>
+  <div class="titleContainer">
+    <h2 padding>Mon Panier</h2>
+    <button ion-button text-center color="secondary" (click)="_goBack()">
+      Modifier
+    </button>
+  </div>
   <ion-list  *ngIf="cart">
       <ion-item *ngFor="let product of cart; let productId = index">
         <ion-thumbnail item-start>
@@ -20,14 +25,13 @@
         </div>
       </ion-item>
     </ion-list>
-    <div class ="priceContainer" padding>
-      <h3>Total dû : {{total}} $</h3>
-    </div>
+    
     <div class="orderContainer">
       <div class="orderButtonContainer">
-      <button ion-button round text-center >
-          Payer
-        </button>
+        <div class="price">
+          <h4>Total: {{total}}$</h4>
+        </div>
+        <button ion-button text-center>Payer</button>
       </div>
     </div>
 </ion-content>

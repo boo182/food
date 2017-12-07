@@ -22,14 +22,25 @@ page-payment {
     background-color: white;
     position: fixed;
     width: 97%;
-    height: 20%;
+    height: 9%;
     top: 82%;
-
 }
 .orderButtonContainer {
-    margin-top: 5px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.titleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.price {
+    margin-right: 50px;
+}
+h1 {
+    padding-bottom: 0px;
+    padding-left: 20px;
 }
 
 }

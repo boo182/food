@@ -18,7 +18,6 @@ export class PaymentPage {
          newCart.push(item);
      }
   });
-  console.log(newCart);
   return newCart;
 }
 
@@ -27,5 +26,7 @@ export class PaymentPage {
     this.total = navParams.get('total');
   }
 
-
+  _goBack = () => {
+    this.navCtrl.pop();
+  }
 }
