@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="body">
+  <h1 padding>Mon Panier</h1>
+  <ion-list  *ngIf="cart">
+      <ion-item *ngFor="let product of cart; let productId = index">
+        <ion-thumbnail item-start>
+          <img src="{{product.img}}">
+        </ion-thumbnail>
+        <h3 class="name">{{product.name}}</h3>
+        <p>{{product.price}}$</p>
+        <div clear item-end>
+          <div clear item-end>
+          Qté: {{product.quantity}} ({{product.quantity * product.price}}$)
+        </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div class ="priceContainer" padding>
+      <h3>Total dû : {{total}} $</h3>
+    </div>
+    <div class="orderContainer">
+      <div class="orderButtonContainer">
+      <button ion-button round text-center >
+          Payer
+        </button>
+      </div>
+    </div>
+</ion-content>

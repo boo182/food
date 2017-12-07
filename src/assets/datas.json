@@ -2,31 +2,34 @@
 	"categories": [
 	{
   		"name": "Boissons",
+		  "img":"../../assets/imgs/boisson.ico",
 		  "products": [
-			{"name": "Coca-Cola 50cl", "price": 4, "img":"../../assets/imgs/coca.png"},
-			{"name": "Fanta 50cl", "price": 3, "img":"../../assets/imgs/fanta.png"},
-            {"name": "Sprite 50cl", "price": 4, "img":"../../assets/imgs/coca.jpg"},
-			{"name": "Ice Tea 50cl", "price": 3, "img":"../../assets/imgs/coca.jpg"},
-            {"name": "Heineken 50cl", "price": 4, "img":"../../assets/imgs/coca.jpg"},
-			{"name": "Evian 50cl", "price": 3, "img":"../../assets/imgs/coca.jpg"}
+			{"name": "Coca-Cola 50cl", "price": 4, "img":"../../assets/imgs/coca.ico"},
+			{"name": "Fanta 50cl", "price": 3, "img":"../../assets/imgs/fanta.ico"},
+            {"name": "Sprite 50cl", "price": 4, "img":"../../assets/imgs/sprite.ico"},
+			{"name": "Ice Tea 50cl", "price": 3, "img":"../../assets/imgs/iceTea.ico"},
+            {"name": "Heineken 50cl", "price": 4, "img":"../../assets/imgs/heineken.ico"},
+			{"name": "Evian 50cl", "price": 3, "img":"../../assets/imgs/evian.ico"}
 		]
 	},
 	{
-  		"name": "Sandwich",
+  		"name": "Sandwiches",
+		  "img":"../../assets/imgs/sandwichIcon.ico",
 		  "products": [
-			{"name": "Jambon beurre", "price": 6, "img":"../../assets/imgs/sand1.jpg"},
-			{"name": "Hot-Dog", "price": 7, "img":"../../assets/imgs/sand2.jpg"},
-            {"name": "Vegetarien", "price": 6, "img":"../../assets/imgs/sand3.jpg"},
-			{"name": "Poulet Frites", "price": 7, "img":"../../assets/imgs/sand4.jpg"}
+			{"name": "Jambon beurre", "price": 6, "img":"../../assets/imgs/sand1.ico"},
+			{"name": "Hot-Dog", "price": 7, "img":"../../assets/imgs/sand2.ico"},
+            {"name": "Vegetarien", "price": 6, "img":"../../assets/imgs/sand3.ico"},
+			{"name": "Poulet Frites", "price": 7, "img":"../../assets/imgs/sand4.ico"}
 		]
 	},
     {
   		"name": "Desserts",
+		  "img":"../../assets/imgs/dessertIcon.ico",
 		  "products": [
-			{"name": "Gateau au chcolat", "price": 6, "img":"../../assets/imgs/desert1.jpg"},
-			{"name": "Tarte aux pommes", "price": 7, "img":"../../assets/imgs/desert2.jpeg"},
-            {"name": "Crème caramel", "price": 6, "img":"../../assets/imgs/desert3.jpg"},
-			{"name": "Glaces", "price": 7, "img":"../../assets/imgs/desert4.jpg"}
+			{"name": "Gateau au chcolat", "price": 6, "img":"../../assets/imgs/desert1.ico"},
+			{"name": "Tarte aux pommes", "price": 7, "img":"../../assets/imgs/desert2.ico"},
+            {"name": "Crème caramel", "price": 6, "img":"../../assets/imgs/desert3.ico"},
+			{"name": "Glaces", "price": 7, "img":"../../assets/imgs/desert4.ico"}
 		]
 	}
   ]

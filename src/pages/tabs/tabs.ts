@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
+import { PaymentPage } from '../payment/payment';
+import { MenuPage } from '../menu/menu';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -10,10 +11,10 @@ import { HomePage } from '../home/home';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab2Root = MenuPage;
+  tab3Root = PaymentPage;
 
-  constructor() {
-
+  constructor(params: NavParams) {
+    console.log(params);
   }
 }

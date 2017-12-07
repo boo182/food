@@ -5,26 +5,41 @@
 </ion-header>
 
 <ion-content class="body">
-  <ion-list>
+  <!--<ion-list>
     <li *ngFor="let item of cart">
       {{item.name}}
     </li>
-  </ion-list>
+  </ion-list>-->
 <ion-list>
-  <ion-list-header *ngFor="let categories of menu; let catId = index" no-lines>
-    <button ion-item (click)="_toggleCategory(catId)">
-    <ion-img width="80" height="80" src="#"></ion-img>
-    {{categories.name}}
-    </button>
-    <ion-list *ngIf="categories.products && categories.open">
-      <li *ngFor="let product of categories.products; let productId = index">
-          <ion-img width="80" height="80" src="product.img"></ion-img>
-          <p>{{product.name}}{{product.price}}$</p>
-          <button (click)="_addToCart(catId, productId)">+</button>
-            <span>{{product.quantity || 0}}</span>
-          <button (click)="_deleteFromCart(catId, productId)">-</button>
-        </li>
-      </ion-list>
+  <ion-list-header *ngFor="let categories of menu; let catId = index" no-lines no-padding>
+      <button ion-item (click)="_toggleCategory(catId)">
+        <div class="catContainer">
+          <ion-img width="100" height="100" src="{{categories.img}}"></ion-img>
+          <h2>{{categories.name}}</h2>
+        </div>
+      </button>
+    <ion-list  *ngIf="categories.products && categories.open">
+      <ion-item *ngFor="let product of categories.products; let productId = index">
+        <ion-thumbnail item-start>
+          <img src="{{product.img}}">
+        </ion-thumbnail>
+        <h3 class="name">{{product.name}}</h3>
+        <p>{{product.price}}$</p>
+        <div clear item-end>
+          <button class="counterButton" (click)="_addToCart(catId, productId)">+</button>
+            <span class="counter">{{product.quantity || 0}}</span>
+          <button class="counterButton" (click)="_deleteFromCart(catId, productId)">-</button>
+        </div>
+      </ion-item>
+    </ion-list>
     </ion-list-header>
 </ion-list>
+<div class="orderContainer">
+  <div class="orderButtonContainer">
+    <button ion-button round [color]="total ? 'default' : 'light'" text-center (click)="_onOrder()">
+      Order {{total || 0}}$
+      </button>
+  </div>
+</div>
 </ion-content>
+
