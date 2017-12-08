@@ -1,25 +1,32 @@
 import { Component } from '@angular/core';
 import  { Http } from '@angular/http';
-import { NavController } from 'ionic-angular';
-//
+import { NavController, NavParams } from 'ionic-angular';
+//Pages
 import { PaymentPage } from '../payment/payment'; 
 import 'rxjs/add/operator/map';
-
+//Service
+import { MenuService } from '../../services/menu.service';
+//Models
+import { Categories } from '../../models/menu.model'
 @Component({
   selector: 'page-menu',
   templateUrl: 'menu.html'
 })
 export class MenuPage {
-  menu: any[];
+  menu: Categories[];
   cart: any[] = [];
   total: number;
 
-  constructor(public navCtrl: NavController, private http: Http) {
-    const json = this.http.get('../../assets/datas.json').map(res => res.json().categories);
-    json.subscribe(data => {
-      this.menu = data
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private menuService: MenuService
+  ) {
+    this.menuService.getMenu(navParams.get('restaurant'))
+    .then(menu => {
+      this.menu = menu.categories;
     });
-}
+ }
 
 /**
   * Méthode qui prend les indexs des catégories et des produits 

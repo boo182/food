@@ -5,8 +5,16 @@
 </ion-header>
 
 <ion-content class="body">
-<h1>Faites votre choix...</h1>
-<ion-list>
+  <div class="headerContainer">
+    <div class="titleContainer">
+      <h3>Faites votre choix...</h3>
+      <div class="cart">
+        <ion-icon name="basket"></ion-icon>
+        <h4>{{total || 0}}€</h4>
+      </div>
+    </div>
+</div>
+<ion-list class="categoriesList">
   <ion-list-header *ngFor="let categories of menu; let catId = index" no-lines no-padding no-margin>
       <button no-lines (click)="_toggleCategory(catId)">
         <div class="catContainer">
@@ -33,7 +41,7 @@
 <div class="orderContainer">
   <div class="orderButtonContainer">
     <button ion-button [color]="total && total > 0 ? 'default' : 'light'" text-center (click)="_onOrder()">
-      Order {{total || 0}}$
+      Panier ({{cart.length || 0}} items)
       </button>
   </div>
 </div>

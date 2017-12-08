@@ -22,12 +22,13 @@ page-payment {
     background-color: white;
     position: fixed;
     width: 97%;
-    height: 9%;
+    height: 20%;
     top: 82%;
 }
 .orderButtonContainer {
+    margin-top: 5px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
 }
 .titleContainer {
@@ -41,6 +42,9 @@ page-payment {
 h1 {
     padding-bottom: 0px;
     padding-left: 20px;
+}
+ion-list {
+    padding-bottom: 50px;
 }
 
 }

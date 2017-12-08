@@ -10,6 +10,9 @@ import { MenuPage } from '../pages/menu/menu';
 import { PaymentPage } from '../pages/payment/payment';
 import { TabsPage } from '../pages/tabs/tabs';
 
+//Services
+import { MenuService } from '../services/menu.service';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -35,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PaymentPage,
   ],
   providers: [
+    MenuService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

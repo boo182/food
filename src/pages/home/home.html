@@ -11,7 +11,9 @@
       <p>
         You can order food at anytime!
       </p>
-      <button (click)="onPress()" ion-button round class="button">Order Now</button>
+      <button (click)="_onChoose('classic')" ion-button round class="button">Classic</button>
+      <button (click)="_onChoose('italian')" ion-button round class="button">Italian</button>
+      
     </div>
   </div>
   <div class="footer">

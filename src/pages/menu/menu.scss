@@ -12,6 +12,11 @@ page-menu {
     margin-left: 10px;
 }
 
+.categoriesList {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .counter {
     margin: 0px 2px 0px 2px;
     padding: 3px 6px 3px 6px;
@@ -24,6 +29,16 @@ page-menu {
     text-align: center;
     width: 25px;
     
+}
+.headerContainer {
+    border-radius: 2%;
+    border: 1px solid #F6F6F6;
+    background-color: white;
+    position: fixed;
+    width: 97%;
+    height: 10%;
+    top: 8%;
+    z-index: 1000;
 }
 ion-list ion-list-header {
     border: none;
@@ -68,4 +83,19 @@ item-md ion-thumbnail img {
 h1{
     padding-left: 20px;
 }
+.titleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart > ion-icon {
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
 }

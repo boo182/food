@@ -12,9 +12,12 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
-  private onPress = () => {
-    this.navCtrl.push(MenuPage);
+  
+  _onChoose = (resto) => {
+    console.log(resto);
+    this.navCtrl.push(MenuPage, {
+      restaurant: resto
+    });
   }
 
 }

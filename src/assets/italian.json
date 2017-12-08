@@ -1,0 +1,56 @@
+{
+	"categories": [
+	{
+  		"name": "Boissons",
+		  "img":"../../assets/imgs/boisson.ico",
+		  "products": [
+			{"name": "Coca-Cola 50cl", "price": 4, "img":"../../assets/imgs/coca.ico"},
+			{"name": "Fanta 50cl", "price": 3, "img":"../../assets/imgs/fanta.ico"},
+            {"name": "Sprite 50cl", "price": 4, "img":"../../assets/imgs/sprite.ico"},
+			{"name": "Vin Rouge 50cl", "price": 8, "img":"../../assets/imgs/rouge.ico"},
+            {"name": "Heineken 50cl", "price": 4, "img":"../../assets/imgs/heineken.ico"},
+			{"name": "Evian 50cl", "price": 3, "img":"../../assets/imgs/evian.ico"}
+		]
+	},
+	{
+  		"name": "Pizza",
+		  "img":"../../assets/imgs/pizza.ico",
+		  "products": [
+			{"name": "Margarita", "price": 10, "img":"../../assets/imgs/margarita.ico"},
+			{"name": "Végan", "price": 11, "img":"../../assets/imgs/vege.ico"},
+            {"name": "4 Fromages", "price": 12, "img":"../../assets/imgs/fromages.ico"},
+			{"name": "Hawaian", "price": 11, "img":"../../assets/imgs/hawai.ico"}
+		]
+	},
+    {
+  		"name": "Pates",
+		  "img":"../../assets/imgs/pates.ico",
+		  "products": [
+			{"name": "Arrabiata", "price": 9, "img":"../../assets/imgs/arrabiata.ico"},
+			{"name": "4 Fromages", "price": 10, "img":"../../assets/imgs/fromage.ico"},
+            {"name": "Bolognaise", "price": 8, "img":"../../assets/imgs/bolo.ico"},
+			{"name": "Pesto", "price": 11, "img":"../../assets/imgs/pesto.ico"}
+		]
+	},
+    {
+  		"name": "Plats",
+		  "img":"../../assets/imgs/platsIta.ico",
+		  "products": [
+			{"name": "Escalope Milanaise", "price": 14, "img":"../../assets/imgs/milanaise.ico"},
+			{"name": "Lasagnes", "price": 11, "img":"../../assets/imgs/lasagnes.ico"},
+            {"name": "Tomate Mozzarela", "price": 8, "img":"../../assets/imgs/mozza.ico"},
+			{"name": "Carpaccio de Boeuf", "price": 13, "img":"../../assets/imgs/carpaccio.ico"}
+		]
+	},
+    {
+  		"name": "Desserts",
+		  "img":"../../assets/imgs/dessertIcon.ico",
+		  "products": [
+			{"name": "Gateau au chcolat", "price": 6, "img":"../../assets/imgs/desert1.ico"},
+			{"name": "Tarte aux pommes", "price": 7, "img":"../../assets/imgs/desert2.ico"},
+            {"name": "Crème caramel", "price": 6, "img":"../../assets/imgs/desert3.ico"},
+			{"name": "Glaces", "price": 7, "img":"../../assets/imgs/desert4.ico"}
+		]
+	}
+  ]
+}
