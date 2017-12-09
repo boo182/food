@@ -14,7 +14,6 @@ export class HomePage {
   }
   
   _onChoose = (resto) => {
-    console.log(resto);
     this.navCtrl.push(MenuPage, {
       restaurant: resto
     });

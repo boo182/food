@@ -13,7 +13,7 @@
 		]
 	},
 	{
-  		"name": "Pizza",
+  		"name": "Pizzas",
 		  "img":"../../assets/imgs/pizza.ico",
 		  "products": [
 			{"name": "Margarita", "price": 10, "img":"../../assets/imgs/margarita.ico"},

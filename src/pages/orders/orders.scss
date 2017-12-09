@@ -1,0 +1,36 @@
+orders-page {
+    .cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cart > ion-icon {
+        margin-right: 10px;
+        margin-top: 4px;
+    }
+    .headerContainer {
+        border-radius: 2%;
+        border: 1px solid #F6F6F6;
+        background-color: white;
+        position: fixed;
+        width: 97%;
+        height: 10%;
+        top: 8%;
+        z-index: 1000;
+    }
+    .listHeader {
+        display: flex;
+        justify-content: space-around;
+    }
+    .ordersContainer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .titleContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+
+}

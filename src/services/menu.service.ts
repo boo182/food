@@ -5,8 +5,6 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class MenuService {
-    private menuClassic = '../assets/classic.json';
-    private menuItalian = '../assets/italian.json'
     
     constructor(private http: Http) {
 

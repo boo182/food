@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Orders</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="body">
+  <div class="headerContainer">
+    <div class="titleContainer">
+      <h3>Vos commandes:</h3>
+      <div class="cart">
+        <h4>{{orders.length || 0}}</h4>
+      </div>
+    </div>
+</div>
+  <ion-list class="ordersContainer" *ngIf="orders">
+    <div *ngFor="let item of orders">
+      <div class="listHeader">
+          <h5>Commande du: {{item.date | date: 'shortDate'}}</h5>
+          <h5>Total: {{item.total}}€</h5>
+        </div>
+            <ion-item *ngFor="let product of item.products">
+                <h3>{{product.name}}</h3>
+                <ion-note item-end>Qté: {{product.quantity}}</ion-note>
+            </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
+

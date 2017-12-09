@@ -1,43 +1,10 @@
 page-payment {
-.name {
-    display: flex;
-    flex-wrap: wrap;
-    text-transform: none;
-    width: 20px;
-}
 .counter {
     margin: 0px 2px 0px 2px;
     padding: 3px 6px 3px 6px;
 }
 .counterButton {
     font-size: 18px;
-}
-.orderContainer {
-    display: flex;
-    justify-content: center;
-}
-.orderContainer {
-    border-radius: 2%;
-    border: 1px solid #F6F6F6;
-    background-color: white;
-    position: fixed;
-    width: 97%;
-    height: 20%;
-    top: 82%;
-}
-.orderButtonContainer {
-    margin-top: 5px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-.titleContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.price {
-    margin-right: 50px;
 }
 h1 {
     padding-bottom: 0px;
@@ -47,4 +14,37 @@ ion-list {
     padding-bottom: 50px;
 }
 
+.name {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: none;
+    width: 20px;
+}    
+.orderContainer {
+    display: flex;
+    justify-content: center;
+}    
+.orderContainer {
+    border-radius: 2%;
+    border: 1px solid #F6F6F6;
+    background-color: white;
+    position: fixed;
+    width: 97%;
+    height: 20%;
+    top: 82%;
+}    
+.orderButtonContainer {
+    margin-top: 5px;
+display: flex;    
+align-items: flex-start;
+justify-content: space-around;
+}
+.titleContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}    
+.price {
+    margin-right: 50px;
+}    
 }
