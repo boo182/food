@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import  { Http } from '@angular/http';
-import { NavController, NavParams, ModalController, Modal } from 'ionic-angular';
+import { NavController, NavParams, ModalController, Modal, ModalOptions } from 'ionic-angular';
 //Pages
 import { PaymentPage } from '../payment/payment';
 import  { ProductModalPage } from '../product-modal/product-modal'; 
@@ -82,14 +82,21 @@ _deleteFromCart = (catId, productId) => {
     }
   }
 
+/**
+  * Méthode qui prend l'index et la catégorie et d'un produit 
+  * et ouvre une modale concernant le produit en question
+  * en conséquence
+  * @param {number} catId
+  * @param {number} productId
+  */
 _productModal = (catId, productId) => {
-
+  const modalOptions: ModalOptions = { enableBackdropDismiss: true, showBackdrop: true};
   const productModal: Modal = this.modalCtrl.create(ProductModalPage, { 
     product: this.menu[catId].products[productId] 
-  });
+  }, modalOptions);
    productModal.present();
    productModal.onDidDismiss((addToCart) => {
-     this._addToCart(catId, productId);
+     return addToCart === true ? this._addToCart(catId, productId) : null;
    });
 }
 

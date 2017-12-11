@@ -28,11 +28,8 @@ export class ProductModalPage {
       this.product = this.navParams.get('product');
   }
 
-  ionViewDidLoad() {
-    console.log(this.product);
-  }
   _closeModal = () => {
-    this.view.dismiss();
+    this.view.dismiss({addToCart: false});
   }
   _onOrder = () => {
     this.view.dismiss({addToCart: true});
