@@ -11,7 +11,7 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class PaymentPage {
   cart: any[];
-  total: any[];
+  total: number;
   
    /**
     * Prend le panier en cours, récupère les éléments par type 
@@ -23,10 +23,18 @@ export class PaymentPage {
     cart.forEach(function(item) {
      if(newCart.indexOf(item) < 0) {
          newCart.push(item);
-     }
-  });
-  return newCart;
-}
+      }
+    });
+    return newCart;
+  }
+
+  // Calcumate the new total after adding or deleting items
+  _calculateTotal = () => {
+    const newTotal = this.cart.length ? this.cart
+    .map(item => item.price * item.quantity)
+    .reduce((a, b) => a + b) : 0;
+    this.total = newTotal;
+  }
 
   constructor(
     public navCtrl: NavController,
@@ -37,6 +45,42 @@ export class PaymentPage {
     this.total = navParams.get('total');
   }
 
+  /**
+    * Ajoute un item à la sélection de produit
+    * @param {number} productId
+    */
+  _addOne = (productId) => {
+    this.cart[productId].quantity += 1;
+    this._calculateTotal();
+  }
+
+  /**
+    * enlève un item à la sélection de produit
+    * @param {number} productId
+    */
+  _removeOne = (productId) => {
+    if(this.cart[productId].quantity === 1) {
+      this._deleteProduct(productId);
+    } else {
+      this.cart[productId].quantity -= 1;
+    }
+     this._calculateTotal();
+  }
+
+  /**
+    * supprime la ligne de produits
+    * @param {number} productId
+    */
+  _deleteProduct = (productId) => {
+    if(this.cart.length === 1) {
+      this.navCtrl.pop();
+    } else {
+      this.cart.splice(productId, 1);
+      this._calculateTotal();
+    }
+    
+  }
+  
    /**
     * Ajoute aux commandes de l'utilisateur la commande actuelle
     */

@@ -95,7 +95,7 @@ _productModal = (catId, productId) => {
     product: this.menu[catId].products[productId] 
   }, modalOptions);
    productModal.present();
-   productModal.onDidDismiss((param) => {  
+   productModal.onWillDismiss((param) => {  
      if(param.addToCart) {
       this._addToCart(catId, productId);
      }

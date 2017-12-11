@@ -12,18 +12,32 @@
     </button>
   </div>
   <ion-list  *ngIf="cart">
-      <ion-item *ngFor="let product of cart; let productId = index">
-        <ion-thumbnail item-start>
-          <img src="{{product.img}}">
-        </ion-thumbnail>
-        <h3 class="name">{{product.name}}</h3>
-        <p>{{product.price}}€</p>
-        <div clear item-end>
+      <ion-item-sliding *ngFor="let product of cart; let productId = index" #index>
+        <ion-item >
+          <ion-thumbnail item-start>
+            <img src="{{product.img}}">
+          </ion-thumbnail>
+          <h3 class="name">{{product.name}}</h3>
+          <p>{{product.price}}€</p>
           <div clear item-end>
-          Qté: {{product.quantity}} ({{product.quantity * product.price}}$)
-        </div>
-        </div>
-      </ion-item>
+            <div clear item-end>
+              Qté: {{product.quantity}} ({{product.quantity * product.price}}$)
+            </div>
+          </div>
+        </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color=default class="productsModification" (click)="_addOne(productId)">
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <button ion-button color="danger" class="productsModification" (click)="_removeOne(productId)">
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </ion-item-options>
+
+          <ion-item-options side="left" (click)="_deleteProduct(productId)">
+            <button ion-button>Delete</button>
+          </ion-item-options>
+      </ion-item-sliding>
     </ion-list>
     
     <div class="orderContainer">
