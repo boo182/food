@@ -13,5 +13,8 @@ export class ConfirmationPage {
       this.navCtrl.popToRoot();
     }, 2000)
   }
-
+  
+  _goHome = () => {
+    this.navCtrl.popToRoot();
+  }
 }
