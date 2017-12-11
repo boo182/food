@@ -9,7 +9,7 @@
   <ion-navbar>
     <ion-title>{{product.name}}</ion-title>
     <ion-buttons end>
-      <button ion-button (click)="_closeModal()">Close</button>
+      <button ion-button (click)="_closeModal(false)">Close</button>
     </ion-buttons>
   </ion-navbar>
 
@@ -29,7 +29,7 @@
 </div>
   <div class="orderContainer">
   <div class="orderButtonContainer">
-    <button ion-button (click)="_onOrder()">
+    <button ion-button (click)="_closeModal(true)">
       Ajouter au Panier
       </button>
   </div>

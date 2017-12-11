@@ -95,12 +95,14 @@ _productModal = (catId, productId) => {
     product: this.menu[catId].products[productId] 
   }, modalOptions);
    productModal.present();
-   productModal.onDidDismiss((addToCart) => {
-     return addToCart === true ? this._addToCart(catId, productId) : null;
+   productModal.onDidDismiss((param) => {  
+     if(param.addToCart) {
+      this._addToCart(catId, productId);
+     }
    });
 }
 
-  /**
+/**
   * Méthode qui calcule le prix total du panier si le panier a au moins un élément.
   */
   _totalPrice = () => {
@@ -117,7 +119,7 @@ _productModal = (catId, productId) => {
     * la propriété open est automatiquement rajouté à l'objet en cours. Elle n'est pas
     * définie dans l'objet initial.
     * @param {number} i
-  */
+    */
   _toggleCategory = (i) => {
     this.menu[i].open = !this.menu[i].open;
     this.menu.forEach(item => {

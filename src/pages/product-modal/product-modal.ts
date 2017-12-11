@@ -4,12 +4,6 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 import { MenuService } from '../../services/menu.service';
 //Models
 import { Product } from '../../models/menu.model'
-/**
- * Generated class for the ProductModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -28,11 +22,8 @@ export class ProductModalPage {
       this.product = this.navParams.get('product');
   }
 
-  _closeModal = () => {
-    this.view.dismiss({addToCart: false});
-  }
-  _onOrder = () => {
-    this.view.dismiss({addToCart: true});
+  _closeModal = (addToCart) => {
+    this.view.dismiss({addToCart});
   }
 
 }
