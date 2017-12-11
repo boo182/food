@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import  { Http } from '@angular/http';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController, Modal } from 'ionic-angular';
 //Pages
-import { PaymentPage } from '../payment/payment'; 
+import { PaymentPage } from '../payment/payment';
+import  { ProductModalPage } from '../product-modal/product-modal'; 
 import 'rxjs/add/operator/map';
 //Service
 import { MenuService } from '../../services/menu.service';
@@ -20,7 +21,8 @@ export class MenuPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private menuService: MenuService
+    private menuService: MenuService,
+    private modalCtrl: ModalController
   ) {
     this.menuService.getMenu(navParams.get('restaurant'))
     .then(menu => {
@@ -80,6 +82,16 @@ _deleteFromCart = (catId, productId) => {
     }
   }
 
+_productModal = (catId, productId) => {
+
+  const productModal: Modal = this.modalCtrl.create(ProductModalPage, { 
+    product: this.menu[catId].products[productId] 
+  });
+   productModal.present();
+   productModal.onDidDismiss((addToCart) => {
+     this._addToCart(catId, productId);
+   });
+}
 
   /**
   * Méthode qui calcule le prix total du panier si le panier a au moins un élément.

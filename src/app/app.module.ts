@@ -10,8 +10,10 @@ import { HomePage } from '../pages/home/home';
 import { MenuPage } from '../pages/menu/menu';
 import { OrdersPage } from '../pages/orders/orders';
 import { PaymentPage } from '../pages/payment/payment';
+import { ProductModalPage } from '../pages/product-modal/product-modal';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
+
 
 //Services
 import { MenuService } from '../services/menu.service';
@@ -29,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     OrdersPage,
     PaymentPage,
+    ProductModalPage,
     SettingsPage,
     TabsPage,
   ],
@@ -45,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     OrdersPage,
     PaymentPage,
+    ProductModalPage,
     SettingsPage,
     TabsPage,
   ],

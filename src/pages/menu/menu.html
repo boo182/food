@@ -24,10 +24,10 @@
       </button>
     <ion-list  *ngIf="categories.products && categories.open">
       <ion-item *ngFor="let product of categories.products; let productId = index">
-        <ion-thumbnail item-start>
+        <ion-thumbnail item-start (click)="_productModal(catId, productId)">
           <img src="{{product.img}}">
         </ion-thumbnail>
-        <h3 class="name">{{product.name}}</h3>
+        <h3 class="name" (click)="_productModal(catId, productId)">{{product.name}}</h3>
         <p>{{product.price}}€</p>
         <div clear item-end>
           <button class="counterButton" (click)="_addToCart(catId, productId)">+</button>
